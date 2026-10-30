@@ -1,0 +1,29 @@
+html, body { margin: 0; height: 100%; overflow: hidden; background: #1e140c; font-family: system-ui, sans-serif; }
+#app canvas { display: block; touch-action: none; }
+#vr {
+  position: fixed; right: 18px; bottom: 18px;
+  padding: 12px 24px; font-size: 17px; font-weight: 700;
+  color: #1e140c; background: #ffc970; border: 0; border-radius: 12px; cursor: pointer;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.45);
+}
+#vr:disabled { background: #3a2a1a; color: #e0c8a8; cursor: default; }
+#hud {
+  display: none; position: fixed; left: 16px; top: 14px; max-width: min(760px, calc(100vw - 32px));
+  color: #fff4e2; font: 16px/1.5 system-ui, sans-serif; pointer-events: none;
+  background: rgba(30,20,10,0.82); padding: 8px 14px; border-radius: 10px; border: 1px solid #82562c;
+}
+#hud b { color: #ffc970; }
+#hud .red { color: #ff6a6a; font-weight: 700; }
+#hud .yel { color: #ffd34a; font-weight: 700; }
+#hud em { color: #ffe3a0; font-style: normal; font-size: 15px; }
+#hint {
+  position: fixed; left: 16px; bottom: 18px; right: 300px; color: #fff4e2; font: 14px/1.5 system-ui, sans-serif;
+  pointer-events: none;
+}
+#hint span { display: inline-block; background: rgba(30,20,10,0.8); padding: 6px 10px; border-radius: 8px; }
+#hint:empty { display: none; }
+#fps {
+  display: none; position: fixed; right: 16px; bottom: 76px; color: #ffdf6e; font: bold 15px monospace;
+  background: rgba(0,0,0,0.6); padding: 4px 8px; border-radius: 6px; pointer-events: none;
+}
+@media (max-width: 640px) { #hint { right: 16px; bottom: 120px; } }
